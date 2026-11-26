@@ -716,6 +716,9 @@
     .build-note p { margin: .6rem 0 0; color: var(--ink-soft); }
     section { scroll-margin-top: 5rem; }
     @media (max-width: 720px) { .build-note { order: 1; } }
+    .project-photo { align-self: start; background: var(--bg-panel); border: 1px solid var(--line); }
+    .project-photo img { display: block; width: 100%; height: 220px; object-fit: contain; }
+    .proj-body .build-note { margin: 1rem 0; }
   </style>
 </head>
 <body>
@@ -739,10 +742,10 @@
       <div class="wrap hero-inner">
         <span class="kicker">Available for internships — Summer 2027</span>
         <h1 class="title">Engineering for <em>everyday access.</em></h1>
-        <p class="hero-sub">I’m Melda Kayatekin, a biomedical engineering student at Stony Brook. I build assistive devices, from a rotating countertop that brings food within reach to a game board players can control remotely.</p>
+        <p class="hero-sub">I’m Melda Kayatekin, a biomedical engineering student at Stony Brook. I build assistive devices, from a rotating countertop that brings food within reach to a game board I’m developing for remote play.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#work">View projects</a>
-          <a class="btn ghost" href="files/Melda Kayatekin.Resume.pdf" download>Download resume (PDF)</a>
+          <a class="btn ghost" href="files/Melda_Kayatekin_Resume(2).pdf" download>Download resume (PDF)</a>
         </div>
       </div>
     </section>
@@ -797,23 +800,25 @@
 
     <div class="proj-list">
     <article class="proj">
-      <div class="build-note"><strong>Prototype tested</strong><p>The next iteration scales the mechanism to an 18-inch turntable with a push-button control.</p></div>
+      <div class="project-photo"><img src="images/countertop-prototype.jpg" alt="Disassembled tabletop prototype with a circular platform and exposed bearing assembly" loading="lazy" width="974" height="1080"></div>
       <div class="proj-body"><div class="proj-tagrow"><span class="proj-cat">VIP BEAR · Household team lead</span></div>
         <h3>Motorized countertop for limited reach</h3><p class="desc">A UCP member needed a way to bring food from the back of a counter within reach. I led our team through a redesign after our first concept required too many parts. We printed a miniature turntable, bearing assembly, and motor housing, then tested rotation with and without weight.</p>
+        <div class="build-note"><strong>Prototype tested</strong><p>The next iteration scales the mechanism to an 18-inch turntable with a push-button control.</p></div>
         <div class="proj-tools"><span>3D printing</span><span>Motor integration</span><span>Load testing</span></div>
       </div>
     </article>
     <article class="proj">
-      <div class="build-note"><strong>Printed proof of concept</strong><p>Motor and button integration are the next steps toward dispensing at the press of a button.</p></div>
+      <div class="project-photo"><img src="images/dispenser-prototype.jpg" alt="Printed hopper and cylindrical auger housing on the dispenser frame" loading="lazy" width="1038" height="1032"></div>
       <div class="proj-body"><div class="proj-tagrow"><span class="proj-cat">VIP BEAR · Household team lead</span></div>
         <h3>Push-button food dispenser</h3><p class="desc">We designed a hopper that feeds material into a rotating auger. Our team printed the proof-of-concept parts to check how the housing, auger, and drive connection fit together.</p>
+        <div class="build-note"><strong>Printed proof of concept</strong><p>Motor and button integration are the next steps toward dispensing at the press of a button.</p></div>
         <div class="proj-tools"><span>Mechanical design</span><span>Auger mechanism</span><span>Prototyping</span></div>
       </div>
     </article>
     <article class="proj">
-      <div class="build-note"><strong>Design decision</strong><p>Players can choose a move through the interface while the pieces stay part of the physical game.</p></div>
+      <div class="build-note"><strong>In progress</strong><p>The goal is to let players choose moves online and see the corresponding pieces move on the physical board.</p></div>
       <div class="proj-body"><div class="proj-tagrow"><span class="proj-cat">Tikkun Olam Makers · Prototyping Fellow</span></div>
-        <h3>Remote interface for a physical board game</h3><p class="desc">I built an online interface for players who have difficulty grasping and moving game pieces. An Arduino uses custom movement code to control a magnet on the physical board.</p>
+        <h3>Remote interface for a physical board game</h3><p class="desc">I’m developing an online interface for players who have difficulty grasping game pieces. The design pairs an Arduino with a magnet to move pieces across the board.</p>
         <div class="proj-tools"><span>Arduino</span><span>Interface design</span><span>Magnetic actuation</span></div>
       </div>
     </article>
@@ -881,24 +886,27 @@
         </div>
       </div>
       <article class="proj">
+      <div class="project-photo"><img src="images/adaptive-switch.jpg" alt="Wall-mounted switch extension with a long handle below the switch plate" loading="lazy" width="607" height="1080"></div>
+      <div class="proj-body">
         <div class="proj-tagrow"><span class="proj-cat">VIP BEAR · Household technology</span></div>
-        <div class="proj-body">
           <h3>Adaptive light switch</h3>
           <p class="desc">Our household team designed and printed a switch extension requested by UCP.</p>
         </div>
       </article>
       <article class="proj">
+      <div class="project-photo"><img src="images/head-controller.jpg" alt="Black head strap with the micro:bit controller mounted at the front" loading="lazy" width="633" height="375"></div>
+      <div class="proj-body">
         <div class="proj-tagrow"><span class="proj-cat">VIP BEAR · Adaptive art</span></div>
-        <div class="proj-body">
           <h3>Head-controlled adaptive art system</h3>
           <p class="desc">I coordinated with the adaptive art subteam. They prototyped a micro:bit headband that maps head tilt to cursor movement and adapted an airbrush for an external button. Pairing the controller with an X–Y gantry is the next integration step.</p>
         </div>
       </article>
       <article class="proj">
-        <div class="proj-tagrow"><span class="proj-cat">Tikkun Olam Makers</span></div>
+        <div class="project-photo"><img src="images/adaptive-costume.png" alt="A white Ghostbusters car costume fitted around a wheelchair, with a red stripe and hand-painted windows." loading="lazy" width="1556" height="1036"></div>
         <div class="proj-body">
+          <div class="proj-tagrow"><span class="proj-cat">Tikkun Olam Makers</span></div>
           <h3>Wheelchair-adaptive costumes</h3>
-          <p class="desc">Through Tikkun Olam Makers, I contributed to adaptive costume projects for children who use wheelchairs.</p>
+          <p class="desc">Through Tikkun Olam Makers, I contributed to adaptive costume projects for children who use wheelchairs. The costume pictured here turns the wheelchair into the Ghostbusters car.</p>
         </div>
       </article>
     </div>
@@ -986,7 +994,7 @@
       <ul class="contact-list">
         <li><span>Email</span><a href="mailto:meldakayatekin@gmail.com">meldakayatekin@gmail.com</a></li>
         <li><span>Phone</span><a href="tel:+16468048842">(646) 804-8842</a></li>
-        <li><span>Resume</span><a href="files/Melda Kayatekin.Resume.pdf" download>Download résumé (PDF)</a></li>
+        <li><span>Resume</span><a href="files/Melda_Kayatekin_Resume(2).pdf" download>Download résumé (PDF)</a></li>
       </ul>
     </div>
   </div>
