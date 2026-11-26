@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -28,7 +28,6 @@
       padding-top: env(safe-area-inset-top, 0px);
       padding-bottom: env(safe-area-inset-bottom, 0px);
     }
-
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
         --bg: #1A1428;
@@ -44,7 +43,6 @@
         --dark-text: #F5F0FA;
       }
     }
-
     :root {
       --bg: #FFFFFF;
       --bg-panel: #F7F2FC;
@@ -58,21 +56,17 @@
       --dark-line: #4A3570;
       --dark-text: #F5F0FA;
     }
-
     html {
       scroll-behavior: smooth;
       scroll-padding-top: calc(72px + env(safe-area-inset-top, 0px));
     }
-
     * {
       box-sizing: border-box;
     }
-
     html,
     body {
       height: 100%;
     }
-
     body {
       margin: 0;
       background: var(--bg);
@@ -82,26 +76,21 @@
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
     }
-
     ::selection {
       background: var(--accent);
       color: #fff;
     }
-
     a {
       color: inherit;
     }
-
     .wrap {
       max-width: 1080px;
       margin: 0 auto;
       padding: 0 28px;
     }
-
     .mono {
       font-family: 'IBM Plex Mono', monospace;
     }
-
     /* ---------- header ---------- */
     header.site {
       position: sticky;
@@ -112,14 +101,12 @@
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--line);
     }
-
     .nav-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 16px 0;
     }
-
     .mark {
       display: flex;
       align-items: center;
@@ -130,18 +117,15 @@
       text-decoration: none;
       color: var(--ink);
     }
-
     .mark .brk {
       color: var(--accent);
       font-family: 'IBM Plex Mono', monospace;
       font-weight: 500;
     }
-
     nav.links {
       display: flex;
       gap: 28px;
     }
-
     nav.links a {
       text-decoration: none;
       color: var(--ink-soft);
@@ -151,16 +135,13 @@
       border-bottom: 1px solid transparent;
       transition: color .15s ease, border-color .15s ease;
     }
-
     nav.links a:hover {
       color: var(--ink);
       border-color: var(--accent);
     }
-
     #menu-toggle {
       display: none;
     }
-
     .burger {
       display: none;
       width: 38px;
@@ -174,14 +155,12 @@
       flex-direction: column;
       gap: 4px;
     }
-
     .burger span {
       width: 16px;
       height: 2px;
       background: var(--ink);
       display: block;
     }
-
     @media (max-width: 720px) {
       nav.links {
         position: absolute;
@@ -192,26 +171,22 @@
         gap: 0;
         background: var(--bg);
         border-bottom: 1px solid var(--line);
-        max-height: 0;
+        max-height: 0; visibility: hidden;
         overflow: hidden;
         transition: max-height .25s ease;
       }
-
       nav.links a {
         padding: 14px 28px;
         border-bottom: 1px solid var(--line);
         border-radius: 0;
       }
-
-      #menu-toggle:checked~nav.links {
-        max-height: 320px;
+      .burger[aria-expanded="true"] + nav.links {
+        max-height: 320px; visibility: visible;
       }
-
       .burger {
         display: flex;
       }
     }
-
     /* ---------- hero ---------- */
     .hero {
       position: relative;
@@ -219,7 +194,6 @@
       border-bottom: 1px solid var(--line);
       overflow: hidden;
     }
-
     .hero::before {
       content: "";
       position: absolute;
@@ -231,21 +205,18 @@
       opacity: .35;
       mask-image: radial-gradient(ellipse 80% 60% at 70% 20%, black, transparent 75%);
     }
-
     .reg-mark {
       position: absolute;
       width: 22px;
       height: 22px;
       opacity: .55;
     }
-
     .reg-mark::before,
     .reg-mark::after {
       content: "";
       position: absolute;
       background: var(--ink-soft);
     }
-
     .reg-mark::before {
       top: 50%;
       left: 0;
@@ -253,7 +224,6 @@
       height: 1px;
       transform: translateY(-50%);
     }
-
     .reg-mark::after {
       left: 50%;
       top: 0;
@@ -261,22 +231,18 @@
       width: 1px;
       transform: translateX(-50%);
     }
-
     .reg-mark.tl {
       top: 24px;
       left: 24px;
     }
-
     .reg-mark.tr {
       top: 24px;
       right: 24px;
     }
-
     .hero-inner {
       position: relative;
       z-index: 1;
     }
-
     .kicker {
       display: inline-flex;
       align-items: center;
@@ -291,7 +257,6 @@
       margin-bottom: 22px;
       background: var(--bg-panel);
     }
-
     .kicker::before {
       content: "";
       width: 6px;
@@ -299,7 +264,6 @@
       background: var(--accent);
       border-radius: 50%;
     }
-
     h1.title {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
@@ -308,26 +272,22 @@
       margin: 0 0 20px;
       max-width: 14ch;
     }
-
     h1.title em {
       font-style: normal;
       color: var(--accent);
     }
-
     .hero-sub {
       max-width: 52ch;
       font-size: 1.12rem;
       color: var(--ink-soft);
       margin: 0 0 34px;
     }
-
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
       margin-bottom: 46px;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -340,55 +300,45 @@
       border: 1px solid var(--ink);
       transition: transform .12s ease, background .15s ease;
     }
-
     .btn.primary {
       background: var(--ink);
       color: var(--bg);
     }
-
     .btn.primary:hover {
       transform: translateY(-1px);
     }
-
     .btn.ghost {
       background: transparent;
       color: var(--ink);
       border-color: var(--line);
     }
-
     .btn.ghost:hover {
       border-color: var(--ink);
     }
-
     .hero-meta {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       border-top: 1px solid var(--line);
       max-width: 640px;
     }
-
     .hero-meta div {
       padding: 16px 18px 0 0;
     }
-
     .hero-meta .num {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 1.5rem;
       color: var(--ink);
     }
-
     .hero-meta .lbl {
       font-size: 0.82rem;
       color: var(--ink-soft);
       margin-top: 2px;
     }
-
     /* ---------- section shell ---------- */
     section {
       padding: 76px 0;
       border-bottom: 1px solid var(--line);
     }
-
     .sec-head {
       display: flex;
       align-items: baseline;
@@ -397,25 +347,21 @@
       margin-bottom: 40px;
       flex-wrap: wrap;
     }
-
     .sec-head h2 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.7rem;
       font-weight: 600;
       margin: 0;
     }
-
     .sec-head .tag {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.8rem;
       color: var(--ink-soft);
     }
-
     .lede {
       max-width: 62ch;
       color: var(--ink-soft);
     }
-
     /* ---------- about ---------- */
     .about-grid {
       display: grid;
@@ -423,25 +369,21 @@
       gap: 56px;
       align-items: start;
     }
-
     .about-grid p {
       max-width: 56ch;
       color: var(--ink-soft);
       margin: 0 0 16px;
     }
-
     .about-grid p:first-child {
       color: var(--ink);
       font-size: 1.08rem;
     }
-
     .chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 22px;
     }
-
     .chip {
       font-size: 0.82rem;
       padding: 7px 12px;
@@ -450,18 +392,15 @@
       color: var(--ink-soft);
       font-family: 'IBM Plex Mono', monospace;
     }
-
     .fact-block {
       border: 1px solid var(--line);
       border-radius: var(--radius-s);
       background: var(--bg-panel);
       padding: 24px;
     }
-
     .fact-block dl {
       margin: 0;
     }
-
     .fact-block .row {
       display: flex;
       justify-content: space-between;
@@ -470,33 +409,27 @@
       border-bottom: 1px solid var(--line);
       font-size: 0.92rem;
     }
-
     .fact-block .row:last-child {
       border-bottom: none;
     }
-
     .fact-block dt {
       color: var(--ink-soft);
     }
-
     .fact-block dd {
       margin: 0;
       font-weight: 500;
       text-align: right;
     }
-
     @media (max-width: 800px) {
       .about-grid {
         grid-template-columns: 1fr;
       }
     }
-
     /* ---------- projects ---------- */
     .proj-list {
       display: flex;
       flex-direction: column;
     }
-
     .proj {
       display: grid;
       grid-template-columns: 220px 1fr;
@@ -504,11 +437,9 @@
       padding: 34px 0;
       border-top: 1px solid var(--line);
     }
-
     .proj:last-child {
       border-bottom: none;
     }
-
     .proj-fig {
       aspect-ratio: 4 / 3;
       border: 1px solid var(--line);
@@ -521,23 +452,19 @@
       align-items: center;
       justify-content: center;
     }
-
     .proj-fig svg {
       width: 62%;
       height: 62%;
     }
-
     .proj-body {
       min-width: 0;
     }
-
     .proj-tagrow {
       display: flex;
       align-items: center;
       gap: 10px;
       margin-bottom: 10px;
     }
-
     .proj-cat {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.76rem;
@@ -546,32 +473,27 @@
       padding: 3px 8px;
       border-radius: var(--radius-s);
     }
-
     .proj-date {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.76rem;
       color: var(--ink-soft);
     }
-
     .proj h3 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.35rem;
       margin: 0 0 10px;
     }
-
     .proj p.desc {
       color: var(--ink-soft);
       margin: 0 0 16px;
       max-width: 62ch;
     }
-
     .proj-tools {
       display: flex;
       flex-wrap: wrap;
       gap: 7px;
       margin-bottom: 16px;
     }
-
     .proj-tools span {
       font-size: 0.78rem;
       color: var(--ink-soft);
@@ -579,7 +501,6 @@
       background: var(--bg-panel);
       border-radius: var(--radius-s);
     }
-
     .proj-link {
       font-size: 0.92rem;
       font-weight: 500;
@@ -587,21 +508,17 @@
       text-decoration: none;
       border-bottom: 1px solid var(--accent-soft);
     }
-
     .proj-link:hover {
       border-color: var(--accent);
     }
-
     @media (max-width: 680px) {
       .proj {
         grid-template-columns: 1fr;
       }
-
       .proj-fig {
         max-width: 240px;
       }
     }
-
     /* ---------- skills ---------- */
     .skill-grid {
       display: grid;
@@ -611,33 +528,27 @@
       border-radius: var(--radius-s);
       overflow: hidden;
     }
-
     .skill-col {
       padding: 26px 28px;
       border-bottom: 1px solid var(--line);
     }
-
     .skill-col:nth-child(odd) {
       border-right: 1px solid var(--line);
     }
-
     .skill-col:nth-last-child(-n+1),
     .skill-col:nth-last-child(-n+2) {
       border-bottom: none;
     }
-
     .skill-col h4 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.02rem;
       margin: 0 0 14px;
     }
-
     .skill-col ul {
       list-style: none;
       margin: 0;
       padding: 0;
     }
-
     .skill-col li {
       display: flex;
       justify-content: space-between;
@@ -647,42 +558,34 @@
       font-size: 0.92rem;
       color: var(--ink-soft);
     }
-
     .skill-col li:first-child {
       border-top: none;
     }
-
     .skill-col li .lvl {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.74rem;
       color: var(--teal);
       white-space: nowrap;
     }
-
     @media (max-width: 680px) {
       .skill-grid {
         grid-template-columns: 1fr;
       }
-
       .skill-col:nth-child(odd) {
         border-right: none;
       }
-
       .skill-col:nth-last-child(-n+2) {
         border-bottom: 1px solid var(--line);
       }
-
       .skill-col:last-child {
         border-bottom: none;
       }
     }
-
     /* ---------- timeline ---------- */
     .timeline {
       position: relative;
       padding-left: 26px;
     }
-
     .timeline::before {
       content: "";
       position: absolute;
@@ -692,16 +595,13 @@
       width: 1px;
       background: var(--line);
     }
-
     .tl-item {
       position: relative;
       padding-bottom: 34px;
     }
-
     .tl-item:last-child {
       padding-bottom: 0;
     }
-
     .tl-item::before {
       content: "";
       position: absolute;
@@ -713,7 +613,6 @@
       background: var(--bg);
       border: 2px solid var(--accent);
     }
-
     .tl-date {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.78rem;
@@ -721,25 +620,21 @@
       display: block;
       margin-bottom: 6px;
     }
-
     .tl-item h4 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.08rem;
       margin: 0 0 4px;
     }
-
     .tl-org {
       font-size: 0.9rem;
       color: var(--ink-soft);
       margin-bottom: 8px;
     }
-
     .tl-item p {
       margin: 0;
       color: var(--ink-soft);
       max-width: 62ch;
     }
-
     /* ---------- contact ---------- */
     .contact-panel {
       background: var(--dark);
@@ -750,32 +645,27 @@
       grid-template-columns: 1.2fr 0.8fr;
       gap: 40px;
     }
-
     .contact-panel h2 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 2rem;
       margin: 0 0 14px;
     }
-
     .contact-panel p {
       color: #A9B6B4;
       max-width: 46ch;
       margin: 0 0 26px;
     }
-
     .contact-panel .btn.primary {
       background: var(--accent);
       border-color: var(--accent);
       color: #fff;
     }
-
     .contact-list {
       list-style: none;
       margin: 0;
       padding: 0;
       border-top: 1px solid var(--dark-line);
     }
-
     .contact-list li {
       border-bottom: 1px solid var(--dark-line);
       padding: 14px 0;
@@ -783,28 +673,23 @@
       justify-content: space-between;
       font-size: 0.92rem;
     }
-
     .contact-list li span:first-child {
       color: #A9B6B4;
     }
-
     .contact-list a {
       text-decoration: none;
       color: var(--dark-text);
       border-bottom: 1px solid #3A4C4E;
     }
-
     @media (max-width: 720px) {
       .contact-panel {
         grid-template-columns: 1fr;
         padding: 40px 26px;
       }
     }
-
     footer.site {
       padding: 30px 0 calc(30px + env(safe-area-inset-bottom, 0px));
     }
-
     footer.site .wrap {
       display: flex;
       justify-content: space-between;
@@ -813,34 +698,32 @@
       font-size: 0.82rem;
       color: var(--ink-soft);
     }
-
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
       }
-
       * {
         transition: none !important;
       }
     }
-
     a:focus-visible,
     button:focus-visible,
     .burger:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 2px;
     }
+    .build-note { padding: 20px; background: var(--bg-panel); border-left: 3px solid var(--accent); align-self: start; }
+    .build-note p { margin: .6rem 0 0; color: var(--ink-soft); }
+    section { scroll-margin-top: 5rem; }
+    @media (max-width: 720px) { .build-note { order: 1; } }
   </style>
 </head>
-
 <body>
-
   <header class="site">
     <div class="wrap nav-row">
       <a href="#top" class="mark"><span class="brk">[BME]</span> Melda Kayatekin</a>
-      <input type="checkbox" id="menu-toggle" aria-hidden="true">
-      <label class="burger" for="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
-      <nav class="links">
+      <button class="burger" type="button" aria-label="Navigation menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="links" id="site-nav" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -849,24 +732,20 @@
       </nav>
     </div>
   </header>
-
   <main id="top">
-
     <section class="hero">
       <span class="reg-mark tl"></span>
       <span class="reg-mark tr"></span>
       <div class="wrap hero-inner">
         <span class="kicker">Available for internships — Summer 2027</span>
-        <h1 class="title">Designing medical devices that <em>hold up</em> under real use.</h1>
-        <p class="hero-sub">I'm Melda Kayatekin, a biomedical engineering student focused on medical device design:
-          from early concept sketches through prototyping, bench testing, and design-control documentation. </p>
+        <h1 class="title">Engineering for <em>everyday access.</em></h1>
+        <p class="hero-sub">I’m Melda Kayatekin, a biomedical engineering student at Stony Brook. I build assistive devices, from a rotating countertop that brings food within reach to a game board players can control remotely.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#work">View projects</a>
-          <a class="btn ghost" href="files/Melda_Kayatekin_Resume.pdf" download>Download resume (PDF)</a>
+          <a class="btn ghost" href="files/Melda Kayatekin.Resume.pdf" download>Download resume (PDF)</a>
         </div>
       </div>
     </section>
-
     <section id="about">
       <div class="wrap about-grid">
         <div>
@@ -874,17 +753,11 @@
             <h2>About</h2>
             <span class="tag">01 — background</span>
           </div>
-          <p> I'm a student studying Biomedical Engineering at Stony Brook, concentrating in medical device design. I'm
-            drawn to the constraints that make this field hard
-            and to turning those constraints into good design decisions for those who need it most, rather than treating them
-            as red impossible tape.</p>
-          <p>Outside coursework, I work as a Team Lead for a research team on daily assistive technology, and I'm part
-            of the Biomedical Engineering Society chapter. I like projects that go from a whiteboard sketch to something
-            I can actually hold and test.</p>
+          <p>At Stony Brook, I lead the VIP BEAR household assistive technology team. We work with United Cerebral Palsy (UCP) to turn everyday tasks, like reaching an item at the back of a counter, into design and testing questions.</p>
+          <p>I also work in the engineering makerspace and as a Quality Engineering Intern at Natech Plastics. Moving between printing prototypes and inspecting molded parts has made me pay closer attention to fit, tolerances, and what happens when a mechanism carries a load.</p>
           <div class="chip-row">
             <span class="chip">Medical devices</span>
             <span class="chip">Assistive technology</span>
-            <span class="chip">Gene editing research</span>
             <span class="chip">Prototyping</span>
             <span class="chip">SolidWorks</span>
           </div>
@@ -915,207 +788,231 @@
         </div>
       </div>
     </section>
-
     <section id="work">
       <div class="wrap">
         <div class="sec-head">
           <h2>Selected work</h2>
           <span class="tag">02 — projects</span>
         </div>
-        <p class="lede" style="margin-bottom:40px;"></p>
 
-        <div class="proj-list">
-
-          <div class="proj">
-            <div class="proj-fig" style="background: var(--bg-panel);">>
-              <img src="images/CoverPage.png" alt="Cover Page" style="width:100%; height:100%; object-fit:contain;">
-            </div>
-            <div class="proj-body">
-              <div class="proj-tagrow"><span class="proj-cat">Coursework</span><span class="proj-date">2025</span>
-              </div>
-              <h3>Microfluidic Systems in Diagnosing Alzheimer's: A Theoretical Design</h3>
-              <p class="desc">A microfluidic biosensor implanted along the spinal cord for early Alzheimer's detection,
-                using a quartz/fused silica chip with enzyme-coated electrochemical sensors to detect Aβ-40, Aβ-42, and
-                p-tau biomarkers in cerebrospinal fluid, then wirelessly transmit results via a Nano FM transmitter to a
-                smartphone or smartwatch. The design prioritizes minimally invasive, low-cost, continuous biomarker
-                monitoring over costly one-time imaging or lumbar puncture methods, using enzyme-based
-               sensing for reusability and laser-etched glass microchannels for biocompatibility and
-                long-term implant stability.</p>
-              <div class="proj-tools"><span>Microfluidics</span><span>Electrochemical Biosensing</span><span>Laser
-                  micromachining</span></div>
-              <a class="proj-link" href="files/BME 100 Final Design Project.pdf" download>Paper (PDF)</a>
-            </div>
+    <div class="proj-list">
+    <article class="proj">
+      <div class="build-note"><strong>Prototype tested</strong><p>The next iteration scales the mechanism to an 18-inch turntable with a push-button control.</p></div>
+      <div class="proj-body"><div class="proj-tagrow"><span class="proj-cat">VIP BEAR · Household team lead</span></div>
+        <h3>Motorized countertop for limited reach</h3><p class="desc">A UCP member needed a way to bring food from the back of a counter within reach. I led our team through a redesign after our first concept required too many parts. We printed a miniature turntable, bearing assembly, and motor housing, then tested rotation with and without weight.</p>
+        <div class="proj-tools"><span>3D printing</span><span>Motor integration</span><span>Load testing</span></div>
+      </div>
+    </article>
+    <article class="proj">
+      <div class="build-note"><strong>Printed proof of concept</strong><p>Motor and button integration are the next steps toward dispensing at the press of a button.</p></div>
+      <div class="proj-body"><div class="proj-tagrow"><span class="proj-cat">VIP BEAR · Household team lead</span></div>
+        <h3>Push-button food dispenser</h3><p class="desc">We designed a hopper that feeds material into a rotating auger. Our team printed the proof-of-concept parts to check how the housing, auger, and drive connection fit together.</p>
+        <div class="proj-tools"><span>Mechanical design</span><span>Auger mechanism</span><span>Prototyping</span></div>
+      </div>
+    </article>
+    <article class="proj">
+      <div class="build-note"><strong>Design decision</strong><p>Players can choose a move through the interface while the pieces stay part of the physical game.</p></div>
+      <div class="proj-body"><div class="proj-tagrow"><span class="proj-cat">Tikkun Olam Makers · Prototyping Fellow</span></div>
+        <h3>Remote interface for a physical board game</h3><p class="desc">I built an online interface for players who have difficulty grasping and moving game pieces. An Arduino uses custom movement code to control a magnet on the physical board.</p>
+        <div class="proj-tools"><span>Arduino</span><span>Interface design</span><span>Magnetic actuation</span></div>
+      </div>
+    </article>
+      <div class="proj">
+        <div class="proj-fig" style="display:flex; gap:6px; padding:6px; background:var(--bg-panel);">
+          <img src="images/TMTposter.png" alt="TMT poster"
+            style="width:50%; height:100%; object-fit:cover; border-radius:2px;">
+          <img src="images/TMTWork.png" alt="TMT motorization work"
+            style="width:50%; height:100%; object-fit:cover; border-radius:2px;">
+        </div>
+        <div class="proj-body">
+          <div class="proj-tagrow"><span class="proj-cat">Research</span><span class="proj-date">Spring 2026</span>
           </div>
-
-          <div class="proj">
-            <div class="proj-fig" style="background: var(--bg-panel);">
-              <img src="images/GUI.png" alt="GUI"
-                style="width:100%; height:100%; object-fit:contain; border-radius:2px;">
-            </div>
-            <div class="proj-body">
-              <div class="proj-tagrow"><span class="proj-cat">Coursework</span><span class="proj-date">Fall 2026</span>
-              </div>
-              <h3>MATLAB App Designer GUI for interactive image editing</h3>
-              <p class="desc">An interactive image editing tool built in MATLAB App Designer that lets users load an
-                image and adjust it in real time using RGB channel sliders, a brightness slider, and a rotate function,
-                with each control immediately updating the displayed image. The project demonstrates GUI design and
-                digital image processing fundamentals, including reading and manipulating pixel data, applying channel
-                specific and brightness transformations, and handling image rotation, all through a clean, user driven
-                interface.</p>
-              <div class="proj-tools"><span>MATLAB</span><span>App Designer</span><span>Image processing</span></div>
-              <a class="proj-link" href="files/FinalProjectBME120.mlapp" download>GUI (mlapp)</a>
-            </div>
-          </div>
-
-          <div class="proj">
-            <div class="proj-fig" style="display:flex; gap:6px; padding:6px; background:var(--bg-panel);">
-              <img src="images/TMTposter.png" alt="TMT poster"
-                style="width:50%; height:100%; object-fit:cover; border-radius:2px;">
-              <img src="images/TMTWork.png" alt="TMT motorization work"
-                style="width:50%; height:100%; object-fit:cover; border-radius:2px;">
-            </div>
-            <div class="proj-body">
-              <div class="proj-tagrow"><span class="proj-cat">Research</span><span class="proj-date">Spring 2026</span>
-              </div>
-              <h3>Motorized Toddler Mobility Trainer</h3>
-              <p class="desc">A motorized upgrade to standard Toddler Mobility Trainers (TMTs), giving children who lack
-                the upper body strength for a manual TMT access to independent movement through a friction drive system
-                that applies roller driven wheel actuation directly to the existing wheel, controlled by a 360 degree
-                analog joystick wired through an Arduino Mega and an L298N H bridge motor driver, with a magnetic safety
-                tether that breaks the circuit if the child is pulled away. Motor torque and wheel to surface contact
-                force were analyzed under load to guide CAD mounting design, since traction was found to be the main
-                performance constraint.</p>
-              <div class="proj-tools"><span>Arduino</span><span>CAD</span><span>Motor Control</span></div>
-              <a class="proj-link" href="files/TMTposter.png">View project</a>
-            </div>
-          </div>
-
-          <div class="proj">
-            <div class="proj-fig" style="display:flex; gap:6px; padding:6px; background:var(--bg-panel);">
-              <img src="images/protofront.png" alt="Keycap front"
-                style="width:50%; height:100%; object-fit:cover; border-radius:2px;">
-              <img src="images/protoback.png" alt="Keycap back"
-                style="width:50%; height:100%; object-fit:cover; border-radius:2px;">
-            </div>
-            <div class="proj-body">
-              <div class="proj-tagrow"><span class="proj-cat">Personal project</span><span class="proj-date">2026</span>
-              </div>
-              <h3>3D printed Braille Keyboard with audio channel</h3>
-              <p class="desc">A 3D printed Braille keyboard designed from scratch in AutoCAD, with custom keycaps
-                embossed in Braille for tactile typing. The project is in progress, currently focused on integrating a
-                voice sensor channel that will audibly announce each key as it is typed, adding a real time feedback
-                layer for users who are blind or visually impaired.</p>
-              <div class="proj-tools"><span>AutoCAD</span><span>3D printing</span><span>Audio sensing</span></div>
-              <a class="proj-link" href="files/Braille keycaps proto.stl">View project</a>
-            </div>
-          </div>
-
+          <h3>Motorized Toddler Mobility Trainer</h3>
+          <p class="desc">Our team adapted a manual trainer for children with limited upper-body strength. A joystick controls a motor-driven roller that turns the existing wheel. Under load, traction at the roller–wheel interface limited performance, so we used contact force and motor torque to guide the mount design.</p>
+          <div class="proj-tools"><span>Arduino</span><span>CAD</span><span>Motor Control</span></div>
+          <a class="proj-link" href="images/TMTposter.png">View project</a>
         </div>
       </div>
-    </section>
-
-    <section id="skills">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>Technical toolkit</h2>
-          <span class="tag">03 — skills</span>
+      <div class="proj">
+        <div class="proj-fig" style="background: var(--bg-panel);">
+          <img src="images/CoverPage.png" alt="Cover Page" style="width:100%; height:100%; object-fit:contain;">
         </div>
-        <div class="skill-grid">
-          <div class="skill-col">
-            <h4>Design & prototyping</h4>
-            <ul>
-              <li><span>SolidWorks</span><span class="lvl">proficient</span></li>
-              <li><span>Iterative prototyping</span><span class="lvl">proficient</span></li>
-              <li><span>Technical documentation</span><span class="lvl">proficient</span></li>
-            </ul>
+        <div class="proj-body">
+          <div class="proj-tagrow"><span class="proj-cat">Coursework</span><span class="proj-date">2025</span>
           </div>
-          <div class="skill-col">
-            <h4>Lab skills</h4>
-            <ul>
-              <li><span>Protocol development</span><span class="lvl">proficient</span></li>
-              <li><span>Biological sample processing</span><span class="lvl">working</span></li>
-              <li><span>Literature review</span><span class="lvl">proficient</span></li>
-            </ul>
-          </div>
-          <div class="skill-col">
-            <h4>Programming</h4>
-            <ul>
-              <li><span>Python</span><span class="lvl">working</span></li>
-              <li><span>Java</span><span class="lvl">working</span></li>
-              <li><span>C++</span><span class="lvl">working</span></li>
-            </ul>
-          </div>
-          <div class="skill-col">
-            <h4>Tools</h4>
-            <ul>
-              <li><span>Excel / data analysis</span><span class="lvl">proficient</span></li>
-              <li><span>Canva</span><span class="lvl">working</span></li>
-              <li><span>Google Workspace</span><span class="lvl">proficient</span></li>
-            </ul>
-          </div>
-    </section>
-
-    <section id="timeline">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>Timeline</h2>
-          <span class="tag">04 — experience</span>
-        </div>
-        <div class="tl-item">
-          <span class="tl-date">Aug 2026 — present</span>
-          <h4>Undergraduate Researcher</h4>
-          <div class="tl-org">Eric Josephs Lab, Stony Brook University</div>
-          <p>Design and execute molecular bioengineering experiments supporting CRISPR-based gene editing and gene
-            therapy research.</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-date">May 2026 — present</span>
-          <h4>Prototyping Fellow</h4>
-          <div class="tl-org">Tikkun Olam Makers (TOM), New York</div>
-          <p>Design and prototype assistive medical devices for specific patient needs, from concept through functional
-            build.</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-date">Dec 2025 — present</span>
-          <h4>Team Lead, VIP BEAR</h4>
-          <div class="tl-org">Stony Brook University</div>
-          <p>Oversee motorized Toddler Mobility Trainer adaptations for children with cerebral palsy, in partnership
-            with United Cerebral Palsy.</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-date">2025</span>
-          <h4>Started B.E. in Biomedical Engineering</h4>
-          <div class="tl-org">Stony Brook University</div>
-          <p>Presidential Scholarship recipient; graduated from The Bronx High School of Science.</p>
-        </div>
-    </section>
-
-    <section id="contact" style="border-bottom:none;">
-      <div class="wrap">
-        <div class="contact-panel">
-          <div>
-            <h2>Let's talk devices.</h2>
-            <p>Open to internships, co-ops, and research collaborations in medical device design.</p>
-            <a class="btn primary" href="mailto:meldakayatekin@gmail.com">Email me</a>
-          </div>
-          <ul class="contact-list">
-            <li><span>Email</span><a href="mailto:meldakayatekin@gmail.com">meldakayatekin@gmail.com</a></li>
-            <li><span>Phone</span><a href="#">(646) 804-8842</a></li>
-            <li><span>Resume</span><a href="#" download>Files/Melda_Kayatekin_Resume.pdf</a></li>
-          </ul>
+          <h3>Microfluidic biosensor concept for Alzheimer’s biomarkers</h3>
+          <p class="desc">For BME 100, I designed a concept for an implantable glass chip that would sample cerebrospinal fluid. The proposed channels route fluid to electrochemical sensors for Aβ40, Aβ42, and phosphorylated tau. The design received a faculty honorable mention.</p>
+          <div class="proj-tools"><span>Microfluidics</span><span>Electrochemical Biosensing</span><span>Laser
+              micromachining</span></div>
+          <a class="proj-link" href="files/BME 100 Final Design Project.pdf" download>Paper (PDF)</a>
         </div>
       </div>
-    </section>
+      <div class="proj">
+        <div class="proj-fig" style="background: var(--bg-panel);">
+          <img src="images/GUI.png" alt="GUI"
+            style="width:100%; height:100%; object-fit:contain; border-radius:2px;">
+        </div>
+        <div class="proj-body">
+          <div class="proj-tagrow"><span class="proj-cat">Coursework</span><span class="proj-date">Fall 2026</span>
+          </div>
+          <h3>Interactive image editor in MATLAB</h3>
+          <p class="desc">I built an app that lets users load an image, adjust individual RGB channels and brightness, and rotate the image. Each control updates the preview so users can see how a change to pixel values affects the result.</p>
+          <div class="proj-tools"><span>MATLAB</span><span>App Designer</span><span>Image processing</span></div>
+          <a class="proj-link" href="files/FinalProjectBME120.mlapp" download>GUI (mlapp)</a>
+        </div>
+      </div>
+      <div class="proj">
+        <div class="proj-fig" style="display:flex; gap:6px; padding:6px; background:var(--bg-panel);">
+          <img src="images/protofront.png" alt="Keycap front"
+            style="width:50%; height:100%; object-fit:cover; border-radius:2px;">
+          <img src="images/protoback.png" alt="Keycap back"
+            style="width:50%; height:100%; object-fit:cover; border-radius:2px;">
+        </div>
+        <div class="proj-body">
+          <div class="proj-tagrow"><span class="proj-cat">Personal project</span><span class="proj-date">2026</span>
+          </div>
+          <h3>3D-printed Braille keyboard</h3>
+          <p class="desc">A 3D printed Braille keyboard designed from scratch in AutoCAD, with custom keycaps
+            embossed in Braille for tactile typing. The project is in progress, currently focused on integrating a
+            voice sensor channel that will audibly announce each key as it is typed, adding a real time feedback
+            layer for users who are blind or visually impaired.</p>
+          <div class="proj-tools"><span>AutoCAD</span><span>3D printing</span><span>Audio feedback</span></div>
+          <a class="proj-link" href="files/Braille keycaps proto.stl">View project</a>
+        </div>
+      </div>
+      <article class="proj">
+        <div class="proj-tagrow"><span class="proj-cat">VIP BEAR · Household technology</span></div>
+        <div class="proj-body">
+          <h3>Adaptive light switch</h3>
+          <p class="desc">Our household team designed and printed a switch extension requested by UCP.</p>
+        </div>
+      </article>
+      <article class="proj">
+        <div class="proj-tagrow"><span class="proj-cat">VIP BEAR · Adaptive art</span></div>
+        <div class="proj-body">
+          <h3>Head-controlled adaptive art system</h3>
+          <p class="desc">I coordinated with the adaptive art subteam. They prototyped a micro:bit headband that maps head tilt to cursor movement and adapted an airbrush for an external button. Pairing the controller with an X–Y gantry is the next integration step.</p>
+        </div>
+      </article>
+      <article class="proj">
+        <div class="proj-tagrow"><span class="proj-cat">Tikkun Olam Makers</span></div>
+        <div class="proj-body">
+          <h3>Wheelchair-adaptive costumes</h3>
+          <p class="desc">Through Tikkun Olam Makers, I contributed to adaptive costume projects for children who use wheelchairs.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Technical toolkit</h2>
+      <span class="tag">03 — skills</span>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-col">
+        <h4>Design & prototyping</h4>
+        <ul>
+          <li><span>SolidWorks</span><span class="lvl">proficient</span></li>
+          <li><span>Iterative prototyping</span><span class="lvl">proficient</span></li>
+          <li><span>Technical documentation</span><span class="lvl">proficient</span></li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Lab skills</h4>
+        <ul>
+          <li><span>Protocol development</span><span class="lvl">proficient</span></li>
+          <li><span>Biological sample processing</span><span class="lvl">working</span></li>
+          <li><span>Literature review</span><span class="lvl">proficient</span></li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Programming</h4>
+        <ul>
+          <li><span>Python</span><span class="lvl">working</span></li>
+          <li><span>Java</span><span class="lvl">working</span></li>
+          <li><span>C++</span><span class="lvl">working</span></li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Tools</h4>
+        <ul>
+          <li><span>Excel / data analysis</span><span class="lvl">proficient</span></li>
+          <li><span>MATLAB App Designer</span><span class="lvl">working</span></li>
+          <li><span>Arduino</span><span class="lvl">proficient</span></li>
+        </ul>
+      </div>
+</div>
+</div>
+</section>
+<section id="timeline">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Timeline</h2>
+      <span class="tag">04 — experience</span>
+    </div>
+    <div class="tl-item"><span class="tl-date">Oct 2026 — present</span><h4>Quality Engineering Intern</h4><div class="tl-org">Natech Plastics</div><p>I inspect injection-molded parts against engineering drawings and document dimensional measurements.</p></div>
+    <div class="tl-item">
+      <span class="tl-date">Apr 2025 — present</span>
+      <h4>Prototyping Fellow</h4>
+      <div class="tl-org">Tikkun Olam Makers (TOM), New York</div>
+      <p>Design and prototype assistive medical devices for specific patient needs, from concept through functional
+        build.</p>
+    </div>
+    <div class="tl-item">
+      <span class="tl-date">Aug 2026 — present</span>
+      <h4>Team Lead, VIP BEAR</h4>
+      <div class="tl-org">Stony Brook University</div>
+      <p>I lead household assistive technology projects with UCP, delegate design tasks, and coordinate prototype testing.</p>
+    </div>
+    <div class="tl-item">
+      <span class="tl-date">May 2025 — present</span><h4>Engineering Makerspace Assistant</h4><div class="tl-org">The Space, Stony Brook University</div><p>I help students troubleshoot CAD models, 3D prints, and mechanical assemblies.</p></div>
+    <div class="tl-item"><span class="tl-date">2025</span>
+      <h4>Started B.E. in Biomedical Engineering</h4>
+      <div class="tl-org">Stony Brook University</div>
+      <p>Presidential Scholarship recipient; graduated from The Bronx High School of Science.</p>
+    </div>
+</div>
+</section>
+<section id="contact" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="contact-panel">
+      <div>
+        <h2>Let's talk devices.</h2>
+        <p>Open to internships, co-ops, and research collaborations in medical device design.</p>
+        <a class="btn primary" href="mailto:meldakayatekin@gmail.com">Email me</a>
+      </div>
+      <ul class="contact-list">
+        <li><span>Email</span><a href="mailto:meldakayatekin@gmail.com">meldakayatekin@gmail.com</a></li>
+        <li><span>Phone</span><a href="tel:+16468048842">(646) 804-8842</a></li>
+        <li><span>Resume</span><a href="files/Melda Kayatekin.Resume.pdf" download>Download résumé (PDF)</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
   </main>
-
   <footer class="site">
     <div class="wrap">
-      <span>© 2026 Jordan Ellery. Built as a portfolio template — replace all bracketed text.</span>
+      <span>© 2026 Melda Kayatekin</span>
       <span>Biomedical Engineering — Medical Device Design</span>
     </div>
   </footer>
-
+<script>
+    const menu = document.querySelector('.burger');
+    const nav = document.getElementById('site-nav');
+    function closeMenu() { menu.setAttribute('aria-expanded', 'false'); }
+    menu.addEventListener('click', () => {
+      menu.setAttribute('aria-expanded', String(menu.getAttribute('aria-expanded') !== 'true'));
+    });
+    nav.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+        menu.focus();
+      }
+    });
+  </script>
 </body>
-
 </html>
